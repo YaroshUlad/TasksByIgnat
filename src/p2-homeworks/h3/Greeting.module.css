@@ -1,0 +1,50 @@
+.someClass {
+
+}
+.wrapper {
+    background-color: aqua;
+    display: flex;
+    width: max-content;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    border: black 2px solid;
+}
+
+.error {
+    border: 1px solid red;
+}
+.errormessage{
+    color: red;
+}
+.wrapper>div {
+   margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper>span {
+    margin-left: 10px;
+    border: black 1px solid;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    background-color: white;
+
+}
+button{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #ad9cd9;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.errorButton{
+    background-color: rgba(255, 0, 0, 0.8);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
