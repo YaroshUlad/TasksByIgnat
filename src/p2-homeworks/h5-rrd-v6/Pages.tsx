@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navigate, Route, Routes } from 'react-router-dom';
+import {Navigate, Route, Routes} from 'react-router-dom';
 import PreJunior from "./pages/PreJunior";
 import Error404 from "./pages/Error404";
 import {Junior} from "./pages/Junior";
@@ -7,7 +7,7 @@ import {JuniorPlus} from "./pages/JuniorPlus";
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
-    JUNIOR:'/junior',             // HW7 - HW11
+    JUNIOR: '/junior',             // HW7 - HW11
     JUNIOR_PLUS: '/junior-plus'   // HW12 to the end
     // add paths
 }

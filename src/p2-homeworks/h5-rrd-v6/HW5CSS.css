@@ -7,12 +7,14 @@
 }
 
 a {
-    margin: 0px 10px;
+    margin: 0 10px;
     text-decoration: none;
 }
+
 .hiddenLinks {
     display: none;
 }
-.headerWrapper:hover .hiddenLinks{
+
+.headerWrapper:hover .hiddenLinks {
     display: flex;
 }
