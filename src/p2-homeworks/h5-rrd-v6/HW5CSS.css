@@ -1,0 +1,18 @@
+.headerWrapper {
+    background-color: red;
+    margin: 10px;
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+a {
+    margin: 0px 10px;
+    text-decoration: none;
+}
+.hiddenLinks {
+    display: none;
+}
+.headerWrapper:hover .hiddenLinks{
+    display: flex;
+}
