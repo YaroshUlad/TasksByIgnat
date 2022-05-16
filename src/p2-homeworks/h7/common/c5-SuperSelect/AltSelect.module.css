@@ -1,0 +1,16 @@
+.selectWrapper {
+    border: 1px solid black;
+    display: inline-block;
+    margin: 10px;
+}
+
+.selected {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.active {
+    padding: 5px;
+    background: blue;
+    color: white;
+}
