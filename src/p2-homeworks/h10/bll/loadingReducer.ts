@@ -27,22 +27,17 @@ export const setFalse = () => {
     }
 }
 
-type SetTrueAT = ReturnType<typeof setTrue>
-type SetFalseAT = ReturnType<typeof setFalse>
-type ActionType = SetFalseAT | SetTrueAT
+export type SetTrueAT = ReturnType<typeof setTrue>
+export type SetFalseAT = ReturnType<typeof setFalse>
+export type ActionType = SetFalseAT | SetTrueAT
 
 export const loadingReducer = (state: LoadingReducerType = initState, action: ActionType): LoadingReducerType => { // fix any
     switch (action.type) {
-        case ACTION_TYPES.SET_TRUE: {
-            return state
-        }
+        case ACTION_TYPES.SET_TRUE:
         case ACTION_TYPES.SET_FALSE: {
-            return state
+            return {...state, ...action.payload}
         }
         default:
             return state
     }
 }
-
-export const loadingAC = (): any => {
-} // fix any
