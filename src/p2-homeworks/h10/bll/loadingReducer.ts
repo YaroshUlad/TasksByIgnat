@@ -10,10 +10,27 @@ const enum ACTION_TYPES {
     SET_FALSE = 'SET_STATE_LOADING_TO_FALSE',
 }
 
+export const setTrue = () => {
+    return {
+        type: ACTION_TYPES.SET_TRUE
+    }
+}
+export const setFalse = () => {
+    return {
+        type: ACTION_TYPES.SET_FALSE
+    }
+}
 
-export const loadingReducer = (state: LoadingReducerType = initState, action: any): any => { // fix any
+type SetTrueAT = ReturnType<typeof setTrue>
+type SetFalseAT = ReturnType<typeof setFalse>
+type ActionType = SetFalseAT|SetTrueAT
+
+export const loadingReducer = (state: LoadingReducerType = initState, action: ActionType): LoadingReducerType => { // fix any
     switch (action.type) {
-        case '': {
+        case ACTION_TYPES.SET_TRUE: {
+            return state
+        }
+        case ACTION_TYPES.SET_FALSE: {
             return state
         }
         default:
