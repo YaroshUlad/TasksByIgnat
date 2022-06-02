@@ -5,7 +5,7 @@ import {AppStateType} from "./bll/store";
 import {setFalse, setTrue} from "./bll/loadingReducer";
 
 function HW10() {
-    // useSelector, useDispatch
+
     const dispatch = useDispatch()
     const loading = useSelector<AppStateType, boolean>(state=>state.loading.loading)
 
@@ -13,7 +13,6 @@ function HW10() {
     const setLoading = () => {
         dispatch(setTrue())
         setTimeout(()=>dispatch(setFalse()), 2000)
-        console.log('loading...')
     };
 
     return (
@@ -21,7 +20,6 @@ function HW10() {
             <hr/>
             homeworks 10
 
-            {/*should work (должно работать)*/}
             {loading
                 ? (
                     <div>крутилка...</div>
