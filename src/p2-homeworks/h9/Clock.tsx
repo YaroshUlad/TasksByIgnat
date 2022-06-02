@@ -32,8 +32,8 @@ function Clock() {
       ${date.getSeconds() < 10 ? 0 : ''}${date.getSeconds()}` // fix with date
 
     const stringDate = `${date.getFullYear()} /
-     ${date.getMonth() < 10 ? 0 : ''}${date.getMonth()} /
-      ${date.getDay() < 10 ? 0 : ''}${date.getDay()}` // fix with date
+     ${date.getMonth() < 10 ? 0 : ''}${date.getMonth()+1} /
+      ${date.getDate() < 10 ? 0 : ''}${date.getDate()}` // fix with date
 
     return (
         <div>
