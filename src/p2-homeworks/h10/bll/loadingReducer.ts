@@ -12,18 +12,24 @@ const enum ACTION_TYPES {
 
 export const setTrue = () => {
     return {
-        type: ACTION_TYPES.SET_TRUE
+        type: ACTION_TYPES.SET_TRUE,
+        payload: {
+            loading: true,
+        }
     }
 }
 export const setFalse = () => {
     return {
-        type: ACTION_TYPES.SET_FALSE
+        type: ACTION_TYPES.SET_FALSE,
+        payload: {
+            loading: false,
+        }
     }
 }
 
 type SetTrueAT = ReturnType<typeof setTrue>
 type SetFalseAT = ReturnType<typeof setFalse>
-type ActionType = SetFalseAT|SetTrueAT
+type ActionType = SetFalseAT | SetTrueAT
 
 export const loadingReducer = (state: LoadingReducerType = initState, action: ActionType): LoadingReducerType => { // fix any
     switch (action.type) {
