@@ -7,12 +7,12 @@ import {setFalse, setTrue} from "./bll/loadingReducer";
 function HW10() {
 
     const dispatch = useDispatch()
-    const loading = useSelector<AppStateType, boolean>(state=>state.loading.loading)
+    const loading = useSelector<AppStateType, boolean>(state => state.loading.loading)
 
 
     const setLoading = () => {
         dispatch(setTrue())
-        setTimeout(()=>dispatch(setFalse()), 2000)
+        setTimeout(() => dispatch(setFalse()), 2000)
     };
 
     return (
