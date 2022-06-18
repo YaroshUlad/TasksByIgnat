@@ -1,4 +1,3 @@
-
 type StateType = {
     theme: string
 }
@@ -15,7 +14,8 @@ export const themeReducer = (state: StateType = initState, action: ChangeThemeAT
         case ACTIONTYPE.changeTheme:
             return {...state, theme: action.theme};
 
-        default: return state;
+        default:
+            return state;
     }
 };
 
