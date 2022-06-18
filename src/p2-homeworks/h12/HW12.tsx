@@ -14,11 +14,8 @@ function HW12() {
     const dispatch = useDispatch()
 
     const themeChanger = (theme: string) => {
-
         dispatch(changeThemeAC(theme))
     }
-    // useDispatch, onChangeCallback
-
     return (
         <div className={s[theme]}>
             <hr/>
@@ -27,10 +24,8 @@ function HW12() {
                 {theme}
             </span>
             <hr/>
-            <SuperSelect options={themes} onChange={(e) => themeChanger(e.currentTarget.value)}/>
-            {/*should work (должно работать)*/}
-            {/*SuperSelect or SuperRadio*/}
-
+            <SuperSelect options={themes}
+                         onChange={(e) => themeChanger(e.currentTarget.value)}/>
             <hr/>
         </div>
     );
