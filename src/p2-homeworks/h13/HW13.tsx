@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './HW13.module.css'
 
-const Hw13 = () => {
+const HW13 = () => {
     return (
         <div>
             
@@ -9,4 +9,4 @@ const Hw13 = () => {
     );
 };
 
-export default Hw13;
+export default HW13;
