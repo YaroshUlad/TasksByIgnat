@@ -7,18 +7,22 @@ import {testApi} from "./api";
 
 const Request = () => {
     const[success, setSuccess] = useState<boolean>(false)
-    const[requestData, setRequestData] = useState<any>(null)
+    const[requestData, setRequestData] = useState<string|null>(null)
 
     const onButtonClick = () => {
         testApi.postRequest(success)
-            .then(setRequestData)
-            .catch(setRequestData)
+            .then(res => {
+                setRequestData(res.errorText)
+            })
+            .catch(res => {
+                setRequestData(res.errorText)
+            })
     }
 
     return (
         <div>
             {requestData}
-            <SuperButton onClick={onButtonClick}/>
+            <SuperButton onClick={onButtonClick}>sent</SuperButton>
             <SuperCheckbox onChangeChecked={(e)=>setSuccess(e)}/>
         </div>
     );
