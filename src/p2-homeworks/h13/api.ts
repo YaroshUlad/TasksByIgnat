@@ -1,4 +1,9 @@
-/*
-https://neko-cafe-back.herokuapp.com/auth/test
+import axios from "axios";
 
-    body: {success: true}*/
+
+
+export const testApi = {
+    postRequest (isSuccess: boolean) {
+        return axios.post('https://neko-cafe-back.herokuapp.com/auth/test', {success: isSuccess})
+    }
+}
