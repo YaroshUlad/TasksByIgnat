@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './HW13.module.css'
+import Request from "./Request";
 
 const HW13 = () => {
     return (
         <div>
-            
+            <Request/>
         </div>
     );
 };
