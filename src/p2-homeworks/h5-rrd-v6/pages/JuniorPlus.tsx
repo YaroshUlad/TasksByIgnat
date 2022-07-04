@@ -5,7 +5,9 @@ export const JuniorPlus = () => {
     return (
         <div>
             HomeWorks for JuniorPlus level will be there.
+            <hr/>
             <HW13/>
+            <hr/>
         </div>
     );
 };
